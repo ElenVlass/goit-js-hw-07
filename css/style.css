@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.picture-item {
+  list-style: none;
+  border: 1px solid transparent;
+  flex-basis: calc(100% / 3 - 20px);
+}
