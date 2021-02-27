@@ -3,6 +3,7 @@ const inputNumberOfBoxesEl = document.querySelector('[type = "number"]');
 const makeBoxesEl = document.querySelector('[data-action="render"]');
 const removeBoxesEl = document.querySelector('[data-action="destroy"]');
 
+
 inputNumberOfBoxesEl.addEventListener('input', handleInputChange)
 inputNumberOfBoxesEl.addEventListener('input', () => {
     makeBoxesEl.addEventListener('click', createBoxes);});
@@ -10,13 +11,15 @@ removeBoxesEl.addEventListener('click', destroyBoxes)
 removeBoxesEl.addEventListener('click', () => {
     makeBoxesEl.removeEventListener('click', createBoxes);});
 
+let boxes = [];
 let amountBoxes = 0;
+
+
 function handleInputChange(event) {
     return amountBoxes = +event.currentTarget.value;
 }
 
 function createBoxes(amount) {
-    let boxes = [];
     amount = amountBoxes;
     for (let i = 0; i < amountBoxes; i += 1) {
 const boxEl = document.createElement('div');
