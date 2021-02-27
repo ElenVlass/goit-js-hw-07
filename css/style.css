@@ -46,3 +46,9 @@ img {
 #validation-input.invalid {
   border-color: #f44336;
 }
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  flex-direction: row;
+}

@@ -4,6 +4,7 @@ const textEl = document.getElementById('text');
 textEl.style.fontSize = '16px';
 rangeEl.min = 12;
 
+rangeEl.addEventListener('input', handleFontSizeChange)
 rangeEl.addEventListener('change', handleFontSizeChange);
 
 function handleFontSizeChange(event) {
